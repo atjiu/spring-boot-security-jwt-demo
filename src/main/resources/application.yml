@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useSSL=false
+    username: root
+    password:
+
+logging:
+  level:
+    com.example: info
+    org.springframework: info
+
+# JWT
+jwt:
+  header: "Authorization"
+  secret: "mySecret"
+  expiration: 604800 # 7days 单位 s
+  tokenHead: "Bearer "
